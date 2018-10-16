@@ -1,17 +1,19 @@
 defmodule Evp.MixProject do
   use Mix.Project
 
+  @github_url "https://github.com/FredrikL/Evp"
+
   def project do
     [
       app: :evp,
-      version: "0.1.0",
+      version: "0.1.1",
       elixir: "~> 1.7",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
       name: "EVP",
       description: "Elixir implementation of OpenSSL EVP_BytesToKey",
       package: package(),
-      source_url: "https://github.com/fredrikl/evp"
+      source_url: @github_url
     ]
   end
 
@@ -28,7 +30,7 @@ defmodule Evp.MixProject do
       # These are the default files included in the package
       files: ~w(lib .formatter.exs mix.exs README* LICENSE* CHANGELOG*),
       licenses: ["MIT"],
-      links: %{"GitHub" => "https://github.com/elixir-ecto/postgrex"}
+      links: %{"GitHub" => @github_url}
     ]
   end
 end
